@@ -1,0 +1,26 @@
+{
+  "name": "mycontact",
+  "version": "1.0.0",
+  "description": "start with handlebars server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SSaffarini/mycontact.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SSaffarini/mycontact/issues"
+  },
+  "homepage": "https://github.com/SSaffarini/mycontact#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mongoose": "^5.7.1",
+    "node-sass-middleware": "^0.11.0",
+      }
+}

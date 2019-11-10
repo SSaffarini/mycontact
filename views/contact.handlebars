@@ -1,0 +1,45 @@
+<div class="container">
+
+
+
+
+
+  <table class="table table-stripped">
+
+    <tbody>
+      <tr>
+        <td>FirstName</td>
+        <td>MiddleName</td>
+        <td>LastName</td>
+        <td>EmailAddress</td>
+        <td>HomePhone</td>
+        <td>HomePhone2</td>
+        <td>MobilePhone</td>
+        <td>BusinessPhone</td>
+        <td>OtherPhone</td>
+        <td>actions</td>
+      </tr>
+
+      {{#each items}}
+      <tr>
+        <td>{{FirstName}}</td>
+        <td>{{MiddleName}}</td>
+        <td>{{LastName}}</td>
+        <td>{{EmailAddress}}</td>
+        <td>{{HomePhone}}</td>
+        <td>{{HomePhone2}}</td>
+        <td>{{MobilePhone}}</td>
+        <td>{{BusinessPhonev}}</td>
+        <td>{{OtherPhone}}</td>
+        <td>
+          <a href="/contact/update/{{_id}}">Update</a>
+          <a href="/contact/delete/{{_id}}">Delete</a>
+
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+
+  </table>
+
+</div>
