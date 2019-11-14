@@ -1,23 +1,41 @@
 <div class="container">
 
+  <form class="" action="" method="get">
+
+  <input type="text" name="FirstName" value="{{query.FirstName}}" placeholder="FirstName">
+  <input type="text" name="MiddleName" value="{{query.MiddleName}}" placeholder="MiddleName">
+  <input type="submit" value="Search">
+
+  </form>
+
+  <script>
+  function myFunction(_id) {
+
+  var flag = confirm("Delete ?");
+  if (flag){
+    location.href="/contact/delete/" + _id
+  }
+  }
+
+  </script>
 
 
 
-
-  <table class="table table-stripped">
+  <table class="table table-striped table-dark" style="font-size: 13px;">
 
     <tbody>
       <tr>
-        <td>FirstName</td>
-        <td>MiddleName</td>
-        <td>LastName</td>
-        <td>EmailAddress</td>
-        <td>HomePhone</td>
-        <td>HomePhone2</td>
-        <td>MobilePhone</td>
-        <td>BusinessPhone</td>
-        <td>OtherPhone</td>
-        <td>actions</td>
+
+        <th scope="col">FirstName</th>
+        <th scope="col">MiddleName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">EmailAddress</th>
+        <th scope="col">HomePhone</th>
+        <th scope="col">HomePhone2</th>
+        <th scope="col">MobilePhone</th>
+        <th scope="col">BusinessPhone</th>
+        <th scope="col">OtherPhone</th>
+        <th scope="col">actions</th>
       </tr>
 
       {{#each items}}
@@ -32,8 +50,10 @@
         <td>{{BusinessPhonev}}</td>
         <td>{{OtherPhone}}</td>
         <td>
+
           <a href="/contact/update/{{_id}}">Update</a>
-          <a href="/contact/delete/{{_id}}">Delete</a>
+
+          <span onclick="myFunction({{_id}})">Delete</span>
 
         </td>
       </tr>

@@ -18,7 +18,7 @@ const model = mongoose.model('contact', contactSchema);
 
 
 const list= async(condition,limit) => {
-limit = limit || 20;
+limit = limit || 1000;
   return await model.find(condition)
   .limit(limit)
     .exec()
